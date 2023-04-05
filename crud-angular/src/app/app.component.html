@@ -1,0 +1,23 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>
+      CRUD Avaliativo - João Paulo de Lima e Magno Levi
+    </span>
+  </mat-toolbar>
+</p>
+
+Nome: <input [(ngModel)]="animal.nome" />
+Código: <input [(ngModel)]="animal.codigo"/>
+
+<button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+
+<table>
+  <tr *ngFor="let animal of animais">
+    <td>{{animal.id}}</td>
+    <td>{{animal.nome}}</td>
+    <td>{{animal.codigo}}</td>
+    <button (click)="editar(animal)">Editar</button>
+    <button (click)="deletar(animal.id)">Deletar</button>
+  </tr>
+</table>
+
